@@ -11,37 +11,38 @@ public class MaximumTest {
 	
 	@Test
 	public void shouldReturnTrue_ForMaxInteger ()
-	{
-		 int max1=Maximum.maximum(5,1,2);
-		 assertEquals( 5 , max1 );
-		 int max2=Maximum.maximum(1,5,2);
-	     assertEquals( 5 , max2 );
-	     int max3=Maximum.maximum(1,2,5);
-		 assertEquals( 5 , max3 );
+	{	
+		Integer [] arr1= {17,18,11};	
+		int max1=Maximum.maximum(arr1);
+		assertEquals( 18 , max1 );
+		
+		Integer [] arr2= {17,18,11,22,3};	
+		int max2=Maximum.maximum(arr2);
+		assertEquals( 22 , max2 );
 	}
 	 
-	   
-		@Test
-		public void shouldReturnTrue_ForMaxDouble ()
-		{
-		    double max1=Maximum.maximum(5.1,1.3,2.8);
-		    assertEquals( 5.1 , max1 , 0);
-		    double max2=Maximum.maximum(1.3,5.1,2.8);
-			assertEquals( 5.1 , max2 , 0 );
-			double max3=Maximum.maximum(1.3,2.8,5.1);
-			 assertEquals( 5.1 , max3 , 0 );
-		}
+	@Test
+	public void shouldReturnTrue_ForMaxDouble ()
+	{	
+		Double [] arr1= {2.5 , 5.1 , 3.4};
+	    double max1=Maximum.maximum(arr1);
+	    assertEquals( 5.1 , max1 , 0);
 	    
-
-	    @Test
-	    public void shouldReturnTrue_WhenMaxStringAt1stPosition ()
-	    {
-	    	String max1=Maximum.maximum("Good","Better","Bad");
-	        assertEquals( "Good" , max1 );
-	        String max2=Maximum.maximum("Bad","Good","Better");
-	        assertEquals( "Good" , max2 );
-	        String max3=Maximum.maximum("Bad","Better","Good");
-	        assertEquals( "Good" , max3 );
-	    }
-	    
+	    Double [] arr2= {2.5 , 5.1 , 3.4 , 22.4 , 13.4 , 6.4};
+	    double max2=Maximum.maximum(arr2);
+	    assertEquals( 22.4 , max2 , 0);
 	}
+	@Test
+	public void shouldReturnTrue_WhenMaxStringAt1stPosition ()
+	{	
+	    String [] arr1={"Good","Better","Bad"};
+	    String max1=Maximum.maximum(arr1);
+	    assertEquals( "Good" , max1 );
+	        
+	    String [] arr2={"Good","Better","Best","Bad","Worst"};
+	    String max2=Maximum.maximum(arr2);
+	    assertEquals( "Worst" , max2 );
+	        
+	 }
+	    
+}
