@@ -2,15 +2,14 @@ package Junit.testProject;
 
 public class Maximum{
 
-		public static String maxString(String str1, String str2, String str3) {
-			String max=str1;
-			if(str2.compareTo(max) > 0 )
-				max=str2;
-			if(str3.compareTo(max) > 0 )
-				max=str3;
-				
-		return max;
-		}
+	public static <E extends Comparable<E>> E printMax(E x , E y , E z) {
+		E max=x;
+		if(y.compareTo(max) > 0 )
+			max=y;
+		if(z.compareTo(max) > 0 )
+			max=z;
+			
+	return max;
+	}
 }
-
 
