@@ -8,27 +8,25 @@ import org.junit.Test;
 
 public class MaximumTest {
 	
-	@SuppressWarnings("deprecation")
 	@Test
-    public void shouldReturnTrue_WhenMaxDoubleAt1stPosition ()
+    public void shouldReturnTrue_WhenMaxStringAt1stPosition ()
     {
-    	double max=Maximum.maxDouble(5.1,1.3,2.7);
-        assertEquals( 5.1 , max, 0 );
+    	String max=Maximum.maxString("good", "better", "bad");
+        assertEquals( "good" , max );
     }
     
     @Test
-    public void shouldReturnTrue_WhenMaxDoubleAt2ndPosition()
+    public void shouldReturnTrue_WhenMaxStringAt2ndPosition()
     {
-    	double max=Maximum.maxDouble(1.3,5.1,2.7);
-        assertEquals( 5.1 , max, 0 );
+    	String max=Maximum.maxString("bad", "good", "better");
+        assertEquals( "good" , max );
     }
     
-    @SuppressWarnings("deprecation")
 	@Test
-    public void shouldReturnTrue_WhenMaxDoubleAt3rdPosition()
+    public void shouldReturnTrue_WhenMaxStringAt3rdPosition()
     {
-    	double max=Maximum.maxDouble(1.3,2.7,5.1);
-        assertEquals( 5.1 , max, 0 );
+    	String max=Maximum.maxString("bad", "better", "good");
+        assertEquals( "good" , max );
     }
 }
 
