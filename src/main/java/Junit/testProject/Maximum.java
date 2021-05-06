@@ -9,7 +9,15 @@ public class Maximum <E extends Comparable<E>>
 			if(a[i].compareTo(max) > 0 )
 				max=a[i];	
 		}
+		printMax(a, max);
 		return max;
+	}
+	
+	public static <E> void printMax(E[] a , E max) {
+		for(int i=1 ; i< a.length ; i+=a.length) {
+			System.out.println("Max is : "+max );
+		}	
+		
 	}
 	
 }
